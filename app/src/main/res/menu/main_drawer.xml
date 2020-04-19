@@ -15,10 +15,6 @@
     </group>
     <group android:id="@+id/money_group">
         <item
-            android:id="@+id/nav_add_money"
-            android:icon="@mipmap/add_moneytwo"
-            android:title="Add Money" />
-        <item
             android:id="@+id/nav_fund_request"
             android:icon="@mipmap/fund_requesttwo"
             android:title="Fund Request" />

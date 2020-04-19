@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -75,8 +76,8 @@ public class RemitterActivity extends AppCompatActivity {
         auth = new Keys().apiKey();
 
         //Initializing ViewModel classes
-        beneficiaryViewModel = ViewModelProviders.of(this).get(BeneficiaryViewModel.class);
-        dmtViewModel = ViewModelProviders.of(this).get(DmtViewModel.class);
+        beneficiaryViewModel = new ViewModelProvider(this).get(BeneficiaryViewModel.class);
+        dmtViewModel = new ViewModelProvider(this).get(DmtViewModel.class);
 
         remitterName = findViewById(R.id.remitter_name);
         remitterNumber = findViewById(R.id.remitter_phone);

@@ -160,11 +160,11 @@ public class HomeFragment extends Fragment implements ItemAdapter.OnItemclickLis
         addMoneyImgOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                Fragment fragment = new AddMoneyFragment();
-                fragmentTransaction.replace(R.id.main_container, fragment);
-                fragmentTransaction.commit();
-                activity.setFragment(fragment);
+//                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+//                Fragment fragment = new AddMoneyFragment();
+//                fragmentTransaction.replace(R.id.main_container, fragment);
+//                fragmentTransaction.commit();
+//                activity.setFragment(fragment);
             }
         });
 
@@ -172,11 +172,11 @@ public class HomeFragment extends Fragment implements ItemAdapter.OnItemclickLis
         addMoneyImgTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                Fragment fragment = new AddMoneyFragment();
-                fragmentTransaction.replace(R.id.main_container, fragment);
-                fragmentTransaction.commit();
-                activity.setFragment(fragment);
+//                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+//                Fragment fragment = new AddMoneyFragment();
+//                fragmentTransaction.replace(R.id.main_container, fragment);
+//                fragmentTransaction.commit();
+//                activity.setFragment(fragment);
             }
         });
 

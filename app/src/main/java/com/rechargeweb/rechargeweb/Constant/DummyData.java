@@ -21,9 +21,9 @@ public class DummyData {
         dummyList.add(new Items(R.drawable.dth_icon, "DTH"));
         dummyList.add(new Items(R.drawable.landline_icon, "Telephone"));
         dummyList.add(new Items(R.drawable.electricity_icon, "Electricity"));
-        dummyList.add(new Items(R.drawable.boardband_icon, "Broadband"));
         dummyList.add(new Items(R.drawable.pan_icon,"PAN Coupon"));
         dummyList.add(new Items(R.drawable.dmt_icon,"DMT"));
+        dummyList.add(new Items(R.drawable.aeps_icon,"ICICI AEPS"));
         dummyList.add(new Items(R.drawable.aeps_icon,"YBL AEPS"));
         return dummyList;
     }

@@ -95,9 +95,6 @@ public class BillPaymentActivity extends AppCompatActivity implements OperatorBy
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill_payment);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradientbakcthree));
-
         Intent intent = getIntent();
         if (intent.hasExtra(Constants.SESSION_ID)) {
             session_id = intent.getStringExtra(Constants.SESSION_ID);

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"
+            style="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp"
+            android:background="@drawable/log_in_background">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/aeps_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorAccent"
+                app:titleTextColor="@color/white"
+                style="@style/AppTheme.PopupOverlay" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icici_logo_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintDimensionRatio="w,16:9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icici_logo" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/icic_mobile_number_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/icic_balance_info_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/icic_balance_info_tv">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/icic_mobile_number_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mobile Number"
+                        android:drawablePadding="8dp"
+                        android:drawableStart="@drawable/ic_phone_android_primary_24dp"
+                        android:inputType="phone"
+                        android:maxLength="10" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/icic_amount_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/icic_mobile_number_layout"
+                    app:layout_constraintStart_toStartOf="@+id/icic_mobile_number_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/icic_mobile_number_layout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/icic_amount_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:drawablePadding="8dp"
+                        android:hint="Amount"
+                        android:drawableStart="@drawable/ic_account_balance_wallet_black_24dp"
+                        android:inputType="number"
+                        android:maxLength="5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/icic_submit_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icic_amount_layout" />
+
+                <TextView
+                    android:id="@+id/icic_balance_info_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableStart="@drawable/ic_account_balance_black_24dp"
+                    android:drawableEnd="@drawable/ic_pick_operator"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:paddingStart="8dp"
+                    android:text="@string/balance_enquiry"
+                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icici_logo_iv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

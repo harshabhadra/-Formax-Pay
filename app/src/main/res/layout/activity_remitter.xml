@@ -108,6 +108,7 @@
                     android:layout_marginBottom="16dp"
                     android:text="Consumed Limit"
                     android:textSize="16sp"
+                    android:textColor="@android:color/white"
                     app:layout_constraintBottom_toTopOf="@+id/textView73"
                     app:layout_constraintEnd_toEndOf="@+id/textView73"
                     app:layout_constraintStart_toStartOf="@+id/textView73"
@@ -121,6 +122,7 @@
                     android:layout_marginEnd="16dp"
                     android:text="Remaining Limit"
                     android:textSize="16sp"
+                    android:textColor="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/remaining_limit_tv"
                     app:layout_constraintEnd_toStartOf="@+id/remaining_limit_tv"
                     app:layout_constraintTop_toTopOf="@+id/remaining_limit_tv" />

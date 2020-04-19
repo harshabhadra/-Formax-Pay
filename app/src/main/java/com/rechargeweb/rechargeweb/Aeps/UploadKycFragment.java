@@ -462,6 +462,7 @@ public class UploadKycFragment extends Fragment implements DatePickerDialog.OnDa
 
     //Check User Status
     private void  checkUserStatus(AepsLogIn aepsLogIn){
+        Log.e(TAG,"aeps status:" + aepsLogIn.getStatus());
         if (aepsLogIn.getStatus().equals("Rejected") || aepsLogIn.getStatus().equals("REJECTED")){
 
             String reject = "ApplicationTest Rejected : " + aepsLogIn.getRemark();

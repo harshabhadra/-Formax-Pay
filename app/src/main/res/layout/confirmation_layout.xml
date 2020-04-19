@@ -13,7 +13,6 @@
         android:layout_height="180dp"
         app:lottie_rawRes="@raw/confirmation"
         app:lottie_autoPlay="true"
-        app:lottie_loop="true"
         android:layout_marginBottom="8dp"
         />
     <TextView
@@ -48,18 +47,16 @@
             android:layout_marginStart="8dp"
             android:text="Number " />
 
-        <TextView
-            android:id="@+id/confirm_number"
-            style="@style/TextAppearance.AppCompat.Body2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="#00c853"
-            android:textSize="16sp"
-            tools:text="9474931174" />
-
     </LinearLayout>
-
+    <TextView
+        android:id="@+id/confirm_number"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_gravity="center"
+        android:textColor="#00c853"
+        android:textSize="16sp"
+        tools:text="9474931174" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

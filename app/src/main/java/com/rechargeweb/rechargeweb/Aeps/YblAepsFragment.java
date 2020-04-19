@@ -74,7 +74,6 @@ public class YblAepsFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -198,7 +197,7 @@ public class YblAepsFragment extends Fragment {
                     finoAepsBinding.finoMobileNumberTextInput.getText().clear();
 
                     withdrawalBuilder = new StringBuilder();
-                    withdrawalBuilder.append(PaisaNikalConfig.ApiTransactionId.YBL_AEPS__CASH_WITHDRAW);
+                    withdrawalBuilder.append(PaisaNikalConfig.ApiServices.YBL_AEPS__CASH_WITHDRAW);
                     withdrawalBuilder.append(System.currentTimeMillis());
                     orderId = withdrawalBuilder.toString();
 
@@ -236,7 +235,7 @@ public class YblAepsFragment extends Fragment {
                     finoAepsBinding.finoMobileNumberTextInput.getText().clear();
 
                     balanceBuilder = new StringBuilder();
-                    balanceBuilder.append(PaisaNikalConfig.ApiTransactionId.YBL_AEPS__BALANCE_INQUIRY);
+                    balanceBuilder.append(PaisaNikalConfig.ApiServices.YBL_AEPS__BALANCE_INQUIRY);
                     balanceBuilder.append(System.currentTimeMillis());
                     orderId = balanceBuilder.toString();
 

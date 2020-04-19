@@ -1758,6 +1758,7 @@ id tvName
 id tvOk
 id tvServiceName
 id tvTitle
+id tvToolbarTitle
 id tvTransactionAmount
 id tvTransactionMainName
 id tvTransactionStatus

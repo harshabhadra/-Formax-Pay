@@ -3,6 +3,7 @@ package com.rechargeweb.rechargeweb.Aeps;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AlertDialog;
@@ -21,9 +22,11 @@ public class AepsActivity extends AppCompatActivity {
 
     private String session_id, user_id, auth_key;
     private AepsViewModel aepsViewModel;
+    private String bank;
 
     private FragmentTransaction fragmentTransaction;
     private AlertDialog alertDialog;
+    private static final String TAG = AepsActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class AepsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         session_id = intent.getStringExtra(Constants.SESSION_ID);
         user_id = intent.getStringExtra(Constants.USER_ID);
+        bank = intent.getStringExtra(Constants.BANK);
 
         //Initializing Auth Key
         auth_key = new Keys().apiKey();
@@ -58,14 +62,21 @@ public class AepsActivity extends AppCompatActivity {
 
                 alertDialog.dismiss();
                 if (aepsLogIn != null) {
+                    Log.e(TAG,"aeps is not null");
                     if (aepsLogIn.getStatus().equals("Approved") || aepsLogIn.getStatus().equals("APPROVED")) {
-
-                        YblAepsFragment yblAepsFragment = new YblAepsFragment();
-                        fragmentTransaction.replace(R.id.aeps_container,yblAepsFragment).commit();
+                        if (bank.equals(Constants.YES_BANK)) {
+                            YblAepsFragment yblAepsFragment = new YblAepsFragment();
+                            fragmentTransaction.replace(R.id.aeps_container, yblAepsFragment).commit();
+                        }else {
+                            IciciAepsFragment iciciAepsFragment = new IciciAepsFragment();
+                            fragmentTransaction.replace(R.id.aeps_container,iciciAepsFragment).commit();
+                        }
                     } else {
                         UploadKycFragment uploadKycFragment = new UploadKycFragment(aepsLogIn);
                         fragmentTransaction.replace(R.id.aeps_container, uploadKycFragment).commit();
                     }
+                }else {
+                    Log.e(TAG,"aeps is null");
                 }
             }
         });

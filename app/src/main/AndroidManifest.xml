@@ -54,7 +54,7 @@
             android:label="Quick DMT"
             android:parentActivityName=".Activity.HomeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light" />
+            android:theme="@style/LightAppTheme" />
         <activity
             android:name=".Activity.DmtActivity"
             android:label="Quick DMT"

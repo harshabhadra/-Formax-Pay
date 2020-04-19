@@ -14,8 +14,8 @@ android {
         applicationId 'com.rechargeweb.rechargeweb'
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 16
-        versionName "3.2.1"
+        versionCode 19
+        versionName "3.2.4"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         ndk {
@@ -24,7 +24,7 @@ android {
     }
     buildTypes {
         release {
-            debuggable true
+            debuggable false
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -53,8 +53,8 @@ android {
     }
 
     packagingOptions {
-        pickFirst  'org/bouncycastle/x509/CertPathReviewerMessages_de.properties'
-        pickFirst  'org/bouncycastle/x509/CertPathReviewerMessages.properties'
+        pickFirst 'org/bouncycastle/x509/CertPathReviewerMessages_de.properties'
+        pickFirst 'org/bouncycastle/x509/CertPathReviewerMessages.properties'
         exclude 'AndroidManifest.xml'
 
     }
@@ -100,16 +100,16 @@ dependencies {
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 
     //Firebase Analytics
-    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
 
     //Firebase Cloud messaging
     implementation 'com.google.firebase:firebase-messaging:20.1.0'
 
     //Firebase Remote config
-    implementation 'com.google.firebase:firebase-config:19.1.0'
+    implementation 'com.google.firebase:firebase-config:19.1.1'
 
     // (Recommended) Add the Google Analytics dependency.
-    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
 
     // Add the Firebase Crashlytics dependency.
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
@@ -175,8 +175,10 @@ dependencies {
     implementation('ch.acra:acra:4.5.0') {
         exclude group: 'org.json'
     }
-    implementation project(path: ':epmoneylib-paisanikal')
+
     releaseApi files('libs/finosdk_live.aar')
     debugApi files('libs/finosdk_live.aar')
+    implementation project(path: ':epmoneylib-paisanikal')
+
 }
 apply plugin: 'com.google.gms.google-services'

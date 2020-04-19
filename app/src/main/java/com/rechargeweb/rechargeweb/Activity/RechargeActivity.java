@@ -38,6 +38,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.rechargeweb.rechargeweb.BottomSheetFrag.BottomSheetFragment;
 import com.rechargeweb.rechargeweb.BottomSheetFrag.DTHSheetFragment;
@@ -72,7 +73,7 @@ public class RechargeActivity extends AppCompatActivity implements BottomSheetFr
 
     EditText numberEditText;
     EditText amountEditText;
-    Button rechargeButton;
+    MaterialButton rechargeButton;
     TextView providerText;
     ImageView providerImage;
     TextView selectType;

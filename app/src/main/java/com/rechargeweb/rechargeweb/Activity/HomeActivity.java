@@ -276,11 +276,18 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.OnHo
                 intent.putExtra(Constants.SESSION_ID, session_id);
                 startActivity(intent);
                 break;
+            case "ICICI AEPS":
+                Intent iaepsIntent = new Intent(HomeActivity.this, AepsActivity.class);
+                iaepsIntent.putExtra(Constants.SESSION_ID,session_id);
+                iaepsIntent.putExtra(Constants.USER_ID,user_id);
+                iaepsIntent.putExtra(Constants.BANK,Constants.ICICI_BANK);
+                startActivity(iaepsIntent);
+                break;
             case "YBL AEPS":
-
                 Intent aepsIntent = new Intent(HomeActivity.this, AepsActivity.class);
                 aepsIntent.putExtra(Constants.SESSION_ID,session_id);
                 aepsIntent.putExtra(Constants.USER_ID,user_id);
+                aepsIntent.putExtra(Constants.BANK,Constants.YES_BANK);
                 startActivity(aepsIntent);
                 break;
             default:
@@ -679,10 +686,6 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.OnHo
                 Intent reportIntent = new Intent(HomeActivity.this, ReportActivity.class);
                 reportIntent.putExtra(Constants.SESSION_ID, session_id);
                 startActivity(reportIntent);
-                break;
-            case R.id.nav_add_money:
-                fragment = new AddMoneyFragment();
-                toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorPrimaryDark));
                 break;
             case R.id.nav_fund_request:
                 Intent intent1 = new Intent(HomeActivity.this, FundRequestActivity.class);

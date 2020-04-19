@@ -49,4 +49,7 @@ public class Constants {
 
     public static final String FIRST_TIME_USER = "first_time_user";
     public static final String IS_FIRST_TIEM = "is_first_time";
+    public static final String YES_BANK = "yes_bank";
+    public static final String ICICI_BANK = "icici_bank";
+    public static final String BANK = "bank";
 }

@@ -269,6 +269,7 @@ public class PlansActivity extends AppCompatActivity implements ComboFragment.On
         Intent intent = new Intent();
         intent.putExtra(Constants.RECHARGE_AMOUNT, amount);
         setResult(RESULT_OK,intent);
+        finish();
     }
 
     @Override
